@@ -1,38 +1,92 @@
+@charset "utf-8";
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+  /* border: 1px solid #808080; */
+  /* box-shadow: 5px 5px 10px rgb(200,200,200); */
+}
+.App .Header {
+  margin-bottom: 8px;
+  color: #1f93ff;
+}
+.App .Header h3 {
+  font-size: 1.25rem;
+}
+.App .Header p {
+  margin-top: 1.5625rem;
+  font-size:2rem;
+  font-weight: 700;
+}
+
+.App .TodoEditor .editor_wrapper {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.App .TodoEditor .editor_wrapper input {
+  flex: 1;
+  box-sizing: border-box;
+  border: 1px solid rgb(220,220,220);
+  border-radius: 5px;
+  padding: 15px;
+}
+.App .TodoEditor .editor_wrapper button {
+  cursor: pointer;
+  width: 88px; border: none;
+  background-color: #1f93ff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.App .TodoList h4 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.App .TodoList .searchbar {
+  margin-bottom: 20px;
+  width: 100%; border: none;
+  border-bottom: 1px solid rgb(200,200,200);
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.App .TodoList .searchbar:focus {
+  outline: none;
+  border-bottom: 1px solid #1f93ff;
+}
+.App .TodoList .list_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.App .TodoList .list_wrapper .TodoItem {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(220,220,220);
 }
-
-.App-link {
-  color: #61dafb;
+.App .TodoList .list_wrapper .TodoItem .checkbox_col {
+  width: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .TodoList .list_wrapper .TodoItem .title_col {
+  flex: 1;
+}
+.App .TodoList .list_wrapper .TodoItem .date_col {
+  font-size: 14px; color: gray;
+}
+.App .TodoList .list_wrapper .TodoItem .btn_col button {
+  cursor: pointer; color: gray;
+  font-size: 14px; border: none;
+  border-radius: 5px; padding: 5px;
 }
